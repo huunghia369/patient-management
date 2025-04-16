@@ -17,7 +17,7 @@ public class KafkaProducer {
     public KafkaProducer(KafkaTemplate<String, byte[]> kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;
     }
-
+    
     public void sendEvent(Patient patient) {
         PatientEvent event = PatientEvent.newBuilder()
                 .setPatientId(patient.getId().toString())
